@@ -1,4 +1,4 @@
-# INF-Project#
+# INF-Project
 
 ## Branching Strategie - GitHub Flow
 
