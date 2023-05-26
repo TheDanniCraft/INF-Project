@@ -4,7 +4,7 @@
 
 Wir arbeiten mit [GitHub Flow](https://www.gitkraken.com/learn/git/best-practices/git-branch-strategy).
 
-Der `main` Branch beinhaltet immer die ***aktuelle*** und ***funktionierende*** Version des Codes. 
+Der `master` Branch beinhaltet immer die ***aktuelle*** und ***funktionierende*** Version des Codes. 
 Um an einem Feature zu arbeiten muss ein neuer Branch erstellt werden indem man nur diese eine Feature bearbeitet.
 Sozusagen für jede Karte im Backlog ein Brach (außer es hat nichts mit dem Code zu tun).
 
