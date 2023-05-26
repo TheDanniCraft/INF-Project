@@ -10,12 +10,12 @@ Sozusagen für jede Karte im Backlog ein Brach (außer es hat nichts mit dem Cod
 
 >Nur eine Person arbeitet an einem Branch!
 
-Wenn das Feature fertig ist muss man wie [hier](https://medium.com/singlestone/a-git-workflow-using-rebase-1b1210de83e5 ) erklärt einen **rebase** machen um den Branch auf den aktuellen Stand des `main` Branch zu bringen.
+Wenn das Feature fertig ist muss man wie [hier](https://medium.com/singlestone/a-git-workflow-using-rebase-1b1210de83e5 ) erklärt einen **rebase** machen um den Branch auf den aktuellen Stand des `master` Branch zu bringen.
 
 >Bei dem Artikel alles zu dem Thema **Fork** ignorieren.
 >Einfach lokal arbeiten.
 
-Danach kann eine **Pull Request** gemacht werden und der Branch in `main` **gemerged** werden.
+Danach kann eine **Pull Request** gemacht werden und der Branch in `master` **gemerged** werden.
 
 Das ist im Bild dargestellt.
 
