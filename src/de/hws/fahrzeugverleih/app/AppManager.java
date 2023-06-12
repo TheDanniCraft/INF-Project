@@ -1,13 +1,24 @@
 package de.hws.fahrzeugverleih.app;
 
 import java.awt.JobAttributes.DialogType;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.security.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import de.hws.fahrzeugverleih.data.Customer;
 import de.hws.fahrzeugverleih.data.Location;
 import de.hws.fahrzeugverleih.data.Motorcar;
+import de.hws.fahrzeugverleih.view.ViewManager;
 
 public class AppManager {
 
@@ -34,12 +45,48 @@ public class AppManager {
 	public void deleteCar(String license) {
 		
 	}
-	private void writeCarsToFile(String filepath, List<Motorcar> car) {
-		
+	private void writeCarsToFile(String filePath) {
+		try {
+			FileOutputStream fos = new FileOutputStream(filePath);
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+			oos.writeObject(allCars);
+			oos.close();
+		} 
+		catch (IOException e) {
+			ViewManager.getInstance().showMessage(e.getLocalizedMessage());
+		}
 	}
-	private List<Motorcar> readCarsFromFile(String filepath) {
-		return null;
+	private void readCarsFromFile(String filePath) {
+		try {
+			FileInputStream fis = new FileInputStream(filePath);
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			allCars = (ArrayList<Motorcar>) ois.readObject();
+		} 
+		catch (IOException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
+	
+	public void writeDataToFile() {
+		try {
+		FileOutputStream fos = new FileOutputStream("cars.json");
+		DataOutputStream dos = new DataOutputStream(fos);
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		String json = gson.toJson(allCars);
+		dos.writeUTF(json);
+		} catch (IOException e) { e.printStackTrace(); }
+	}
+	
+	private void readDataFromFile() {
+		try {
+		FileInputStream fis = new FileInputStream("cars.json");
+		DataInputStream dis = new DataInputStream(fis);
+		String json = dis.readUTF();
+		Gson gson = new Gson();
+		allCars = gson.fromJson(json, ArrayList.class);
+		} catch (IOException e) { e.printStackTrace(); }
+	}
+	
 	private void exportCarsToFile(String filePath) {
 		
 	}

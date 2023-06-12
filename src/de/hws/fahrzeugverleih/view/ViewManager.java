@@ -79,5 +79,9 @@ public class ViewManager {
 	public void updateCustomerDataPanel(List<Customer> customer) {
 		
 	}
+	
+	public void showMessage(String message) {
+		
+	}
 
 }
