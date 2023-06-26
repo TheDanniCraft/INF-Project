@@ -177,8 +177,8 @@ public class AppManager {
 		writeCustomerToFile("./Customers");
 	}
 	public void importData() {
-		readCarsFromFile("./CarsDump.json");
-		readCustomerFromFile("./CustomersDump.json");
+		importCarsFromFile("./CarsDump.json");
+		importCustomersFromFile("./CustomersDump.json");
 	}
 	public void exportData() {
 		exportCarsToFile("./CarsDump.json");
