@@ -1,0 +1,119 @@
+package de.hws.fahrzeugverleih.view.dataTable;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+import de.hws.fahrzeugverleih.view.ViewManager;
+
+import java.awt.Font;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+
+public class NewItemDialogFrame extends JFrame{
+
+	private int type;
+	private JTextField textName;
+	private JTextField textVorname;
+	private JTextField textAdresse;
+	private JTextField textLic;
+	private JTextField textBez;
+	private JTextField textTyp;
+	private JTextField textKm;
+	private JTextField textChk;
+
+	public NewItemDialogFrame(int t) {
+	}
+
+	private void createLayoutCustomer() {
+		
+		// Parameter speichern
+		setBounds(100, 100, 450, 300);
+		// zuerst erzeugen wir ein kleines Panel mit 2 Button
+		JPanel panel = new JPanel();
+		panel.setLayout(new GridLayout(0, 2, 0, 0));
+		JButton okButton = new JButton("OK");
+		okButton.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+		if (type == ViewManager.CUSTOMER) {
+			submitCustomerData();
+		}
+		}
+		});
+		panel.add(okButton);
+		okButton.setActionCommand("OK");
+		getRootPane().setDefaultButton(okButton);
+		JButton cancelButton = new JButton("Cancel");
+		cancelButton.setFont(new Font("Verdana", Font.PLAIN, 12));
+		cancelButton.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+		dispose();
+		}
+		});
+		panel.add(cancelButton);
+		cancelButton.setActionCommand("Cancel");
+	}
+
+	private void createLayoutCar() {
+		
+		// Parameter speichern
+		setBounds(100, 100, 450, 300);
+		// zuerst erzeugen wir ein kleines Panel mit 2 Button
+		JPanel panel = new JPanel();
+		panel.setLayout(new GridLayout(0, 2, 0, 0));
+		JButton okButton = new JButton("OK");
+		okButton.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+		if (type == ViewManager.CAR) {
+		submitCarData();
+		setTitle("Bitte Kundendaten eingeben");
+		 /*getContentPane().setLayout( new MigLayout("", "[30%,grow][70%,grow]",
+		"[5%][15%][5%][15%][5%][15%][5%][15%][5%][10%]")); */
+		createLayoutCustomer();
+		getContentPane().add(panel, "cell 0 9 2 1,grow");
+
+		}
+		}
+		});
+		panel.add(okButton);
+		okButton.setActionCommand("OK");
+		getRootPane().setDefaultButton(okButton);
+		JButton cancelButton = new JButton("Cancel");
+		cancelButton.setFont(new Font("Verdana", Font.PLAIN, 12));
+		cancelButton.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+		dispose();
+		}
+		});
+		panel.add(cancelButton);
+		cancelButton.setActionCommand("Cancel");
+	}
+
+	private boolean checkText(String text) {
+		return false;
+	}
+
+	private boolean checkNumbers(String text) {
+		return false;
+	}
+
+	private boolean checkTextAndNumbers(String text) {
+		return false;
+	}
+
+	private void submitCustomerData() {
+	}
+
+	private void submitCarData() {
+
+		
+		
+		
+	}
+
+}
