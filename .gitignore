@@ -32,5 +32,7 @@ bin/
 commons-logging-1.1.1.jar
 Fahrzeugverleih.iml
 jxmapviewer2-2.4.jar
-gson-2.10.1.jars
+miglayout15-swing.jar
 .idea
+/gson-2.10.1.jar
+/jgoodies-forms-1.8.0.jar

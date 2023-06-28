@@ -1,4 +1,4 @@
-package de.hws.FahrzeugVerleih.view.dataTable;
+package de.hws.fahrzeugverleih.view.dataTable;
 
 import javax.swing.JPanel; 
 import java.awt.GridLayout;

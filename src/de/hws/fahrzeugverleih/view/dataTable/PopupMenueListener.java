@@ -1,4 +1,4 @@
-package de.hws.FahrzeugVerleih.view.dataTable;
+package de.hws.fahrzeugverleih.view.dataTable;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -9,7 +9,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
 import javax.swing.SwingUtilities;
 
-import de.hws.FahrzeugVerleih.view.DialogFrameCustomer;
+import de.hws.fahrzeugverleih.view.DialogFrameCustomer;
 
 public class PopupMenueListener extends MouseAdapter {
 
