@@ -1,4 +1,4 @@
-package de.hws.FahrzeugVerleih.view.dataTable;
+package de.hws.fahrzeugverleih.view.dataTable;
 
 import java.awt.EventQueue;
 import java.awt.Graphics2D;

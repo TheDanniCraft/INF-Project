@@ -1,10 +1,10 @@
-package de.hws.FahrzeugVerleih.view.dataTable;
+package de.hws.fahrzeugverleih.view.dataTable;
 
 import javax.swing.JTable; 
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import de.hws.FahrzeugVerleih.view.*;
+import de.hws.fahrzeugverleih.view.*;
 
 public class CustomerListSelectionListener implements ListSelectionListener {
 

@@ -1,4 +1,4 @@
-package de.hws.FahrzeugVerleih.view.dataTable;
+package de.hws.fahrzeugverleih.view.dataTable;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -11,7 +11,7 @@ import javax.swing.JTable;
 import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 
-import de.hws.FahrzeugVerleih.view.*;
+import de.hws.fahrzeugverleih.view.*;
 
 
 public class CustomerCellEditListener extends MouseAdapter {
